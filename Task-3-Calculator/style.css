@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0b1120;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.calculator {
+    width: 350px;
+    padding: 25px;
+    background: #172337;
+    border: 1px solid #293b52;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px #00000066;
+}
+
+.header {
+    margin-bottom: 25px;
+}
+
+.header h2 {
+    color: white;
+    font-size: 25px;
+}
+
+.header h2 span {
+    color: #38bdf8;
+}
+
+.header p {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.display {
+    background: #0b1120;
+    padding: 20px 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 95px;
+}
+
+#history {
+    color: #94a3b8;
+    font-size: 14px;
+    min-height: 20px;
+    margin-bottom: 8px;
+}
+
+#result {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 32px;
+    text-align: right;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    background: #25364d;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #344b68;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button.special {
+    background: #334155;
+    color: #38bdf8;
+}
+
+button.operator {
+    background: #164e63;
+    color: #38bdf8;
+}
+
+button.equal {
+    background: #38bdf8;
+    color: #07111f;
+}
+
+button.equal:hover {
+    background: #7dd3fc;
+}
+
+button.zero {
+    grid-column: span 2;
+}
+
+.footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    margin-top: 22px;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        padding: 18px;
+    }
+
+    button {
+        height: 55px;
+    }
+}
